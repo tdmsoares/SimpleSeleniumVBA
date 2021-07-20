@@ -1,0 +1,16 @@
+﻿{
+  "Info": {
+    "Class": "clsDbVbeProject",
+    "Description": "VBE Project"
+  },
+  "Items": {
+    "Name": "SimpleSeleniumVBA",
+    "Description": "",
+    "FileName": "rel:SimpleSeleniumVBA.accda",
+    "HelpFile": "",
+    "HelpContextId": 0,
+    "Mode": 0,
+    "Protection": 0,
+    "Type": 100
+  }
+}

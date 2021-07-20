@@ -1,0 +1,105 @@
+﻿-------------------------------------
+Beginning Export of all Source
+SimpleSeleniumVBA.accda
+VCS Version 3.3.17
+Using Fast Save
+20/07/2021 18:23:42
+-------------------------------------
+-------------------------------------
+Exporting themes...           
+  Tema do Office
+[1] themes processed.
+-------------------------------------
+Exporting vb project...       
+  SimpleSeleniumVBA
+[1] vb project processed.
+-------------------------------------
+Exporting vbe references...   
+  stdole
+[4] vbe references processed.
+-------------------------------------
+No modified vbe forms found in this database.
+-------------------------------------
+Exporting proj properties...  
+  Current Project Properties (Access)
+[1] proj properties processed.
+-------------------------------------
+No modified saved specs found in this database.
+-------------------------------------
+No modified shared images found in this database.
+-------------------------------------
+No modified imex specs found in this database.
+-------------------------------------
+Exporting db properties...    
+  Database Properties (DAO)
+[31] db properties processed.
+-------------------------------------
+No modified tables found in this database.
+-------------------------------------
+No modified queries found in this database.
+-------------------------------------
+No modified forms found in this database.
+-------------------------------------
+No modified macros found in this database.
+-------------------------------------
+No modified modules found in this database.
+-------------------------------------
+No modified reports found in this database.
+-------------------------------------
+Exporting table data...       
+  USysRegInfo
+[1] table data processed.
+-------------------------------------
+No modified table data macros found in this database.
+-------------------------------------
+No modified relations found in this database.
+-------------------------------------
+Exporting doc properties...   
+  Database Documents
+[2] doc properties processed.
+-------------------------------------
+Exporting nav pane groups...  
+  Groups
+[1] nav pane groups processed.
+-------------------------------------
+No modified hidden attributes found in this database.
+-------------------------------------
+Done. (0,12 seconds)
+
+--------------------------------------------------
+                PERFORMANCE REPORTS
+--------------------------------------------------
+Object Type                   Count     Seconds
+--------------------------------------------------
+Themes                        1         0,02
+VB Project                    1         0,00
+VBE References                4         0,00
+Proj Properties               1         0,00
+DB Properties                 31        0,02
+Table Data                    1         0,00
+Doc Properties                2         0,00
+Nav Pane Groups               1         0,00
+--------------------------------------------------
+TOTALS:                       42        0,05
+--------------------------------------------------
+
+--------------------------------------------------
+Operations                    Count     Seconds
+--------------------------------------------------
+Read File                     7         0,00
+Compute SHA256                9         0,00
+Console Updates               2         0,03
+Verify Path                   3         0,00
+Create Folder                 1         0,00
+Export Theme                  1         0,02
+Compare Dictionary            5         0,01
+Get Modified Date             2         0,00
+Clear Orphaned                3         0,00
+Get VBA Hash                  6         0,00
+Delete File                   1         0,00
+Write File                    2         0,00
+--------------------------------------------------
+Other Operations                        0,05
+--------------------------------------------------
+
+

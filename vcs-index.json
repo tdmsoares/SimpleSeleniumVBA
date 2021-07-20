@@ -1,0 +1,68 @@
+﻿{
+  "Info": {
+    "Class": "clsVCSIndex",
+    "Description": "Version Control System Index"
+  },
+  "Items": {
+    "MergeBuildDate": null,
+    "FullBuildDate": null,
+    "ExportDate": "20/07/2021 18:23:43",
+    "FullExportDate": "20/07/2021 18:22:59",
+    "OptionsHash": "604f04a",
+    "LastMergedCommit": "",
+    "Components": {
+      "Modules": {
+        "BrowserNavigation_Helper.bas": {
+          "Hash": "024e2f2",
+          "ExportDate": "20/07/2021 18:22:59",
+          "SourceModified": "20/07/2021 18:22:59"
+        },
+        "DebugWarningHandler.bas": {
+          "Hash": "3264043",
+          "ExportDate": "20/07/2021 18:22:59",
+          "SourceModified": "20/07/2021 18:22:59"
+        },
+        "Element_Helper.bas": {
+          "Hash": "3ea6c11",
+          "ExportDate": "20/07/2021 18:22:59",
+          "SourceModified": "20/07/2021 18:22:59"
+        },
+        "EmptyTextChecker.bas": {
+          "Hash": "cb33183",
+          "ExportDate": "20/07/2021 18:22:59",
+          "SourceModified": "20/07/2021 18:22:59"
+        },
+        "OpenBrowser_Helper.bas": {
+          "Hash": "59305f8",
+          "ExportDate": "20/07/2021 18:22:59",
+          "SourceModified": "20/07/2021 18:22:59"
+        },
+        "OpenWebdriver_Helper.bas": {
+          "Hash": "46455a8",
+          "ExportDate": "20/07/2021 18:22:59",
+          "SourceModified": "20/07/2021 18:22:59"
+        }
+      },
+      "Tables": {
+        "USysRegInfo.xml": {
+          "ExportDate": "20/07/2021 18:22:58",
+          "SourceModified": "20/07/2021 18:22:58"
+        }
+      },
+      "VB Project": {
+        "vbe-project.json": {
+          "Hash": "7977ad2",
+          "ExportDate": "20/07/2021 18:23:42",
+          "SourceModified": "20/07/2021 18:22:58"
+        }
+      },
+      "VBE References": {
+        "vbe-references.json": {
+          "Hash": "23f2800",
+          "ExportDate": "20/07/2021 18:23:42",
+          "SourceModified": "20/07/2021 18:22:58"
+        }
+      }
+    }
+  }
+}

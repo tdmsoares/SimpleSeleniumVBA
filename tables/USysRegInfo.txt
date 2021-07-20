@@ -1,0 +1,1 @@
+﻿Subkey	Type	ValName	Value
