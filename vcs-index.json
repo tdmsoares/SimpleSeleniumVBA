@@ -6,16 +6,16 @@
   "Items": {
     "MergeBuildDate": null,
     "FullBuildDate": null,
-    "ExportDate": "20/07/2021 18:23:43",
+    "ExportDate": "21/07/2021 09:25:01",
     "FullExportDate": "20/07/2021 18:22:59",
     "OptionsHash": "604f04a",
     "LastMergedCommit": "",
     "Components": {
       "Modules": {
         "BrowserNavigation_Helper.bas": {
-          "Hash": "024e2f2",
-          "ExportDate": "20/07/2021 18:22:59",
-          "SourceModified": "20/07/2021 18:22:59"
+          "Hash": "d1cd7a3",
+          "ExportDate": "21/07/2021 09:25:01",
+          "SourceModified": "21/07/2021 09:25:01"
         },
         "DebugWarningHandler.bas": {
           "Hash": "3264043",
@@ -52,14 +52,14 @@
       "VB Project": {
         "vbe-project.json": {
           "Hash": "7977ad2",
-          "ExportDate": "20/07/2021 18:23:42",
+          "ExportDate": "21/07/2021 09:25:01",
           "SourceModified": "20/07/2021 18:22:58"
         }
       },
       "VBE References": {
         "vbe-references.json": {
           "Hash": "23f2800",
-          "ExportDate": "20/07/2021 18:23:42",
+          "ExportDate": "21/07/2021 09:25:01",
           "SourceModified": "20/07/2021 18:22:58"
         }
       }

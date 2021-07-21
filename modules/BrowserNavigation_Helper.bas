@@ -12,8 +12,8 @@ Sub NavigateTo(ByVal strWebdriverURL As String, ByVal strBrowserSessionId As Str
     'Navega para o endereço strURL
     Dim objMXSML2ServerXMLHTPP As New MSXML2.ServerXMLHTTP
     Call objMXSML2ServerXMLHTPP.Open("POST", strWebdriverURL & "/session/" & strBrowserSessionId & "/url")
-    'Call objMXSML2ServerXMLHTPP.setRequestHeader("Content-Type", "application/json; charset=utf-8")
-    objMXSML2ServerXMLHTPP.send ("{""url"":"" & strURL & ""}")
+    Call objMXSML2ServerXMLHTPP.setRequestHeader("Content-Type", "application/json; charset=utf-8")
+    objMXSML2ServerXMLHTPP.send ("{""url"":""" & strURL & """}")
     '
     Call GetCurrentURL(strWebdriverURL, strBrowserSessionId)
 End Sub
