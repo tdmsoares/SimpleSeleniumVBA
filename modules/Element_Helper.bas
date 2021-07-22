@@ -20,6 +20,7 @@ Function FindElementByXpath(ByVal strWebdriverURL As String, ByVal strBrowserSes
     '
     'Call GetCurrentURL(strWebdriverURL, strBrowserSessionId)
     strServerResponse = objMXSML2ServerXMLHTPP.responseText
+    Debug.Print strServerResponse
     FindElementByXpath = ExtractElementIdFromServerResponse(strServerResponse)
     
 End Function
@@ -46,7 +47,7 @@ With objRegex:
     .Pattern = """\b.*"""
 End With
 Set objMatchCollection = objRegex.Execute(objMatchCollection.Item(0))
-ExtractElementIdFromServerResponse = objMatchCollection.Item(0)
+ExtractElementIdFromServerResponse = Strings.Replace(objMatchCollection.Item(0), """", "")
 End Function
 
 Sub SendTextKeys(ByVal strWebdriverURL As String, ByVal strBrowserSessionId As String, ByVal strElementId As String, ByVal strTextToSend As String)
@@ -86,3 +87,33 @@ Sub Click(ByVal strWebdriverURL As String, ByVal strBrowserSessionId As String, 
     End If
     
 End Sub
+
+Function GetAttributeValue(ByVal strWebdriverURL As String, ByVal strBrowserSessionId As String, ByVal strElementId As String, ByVal strAttributeName As String) As String
+    '
+    'Obtem o Valor do attribute strAttributeName referente ao Elemento strElementId
+    Dim strServerResponse As String
+    Dim objMXSML2ServerXMLHTPP As New MSXML2.ServerXMLHTTP
+    'Call objMXSML2ServerXMLHTPP.setRequestHeader("Content-Type", "application/json; charset=utf-8")
+    Call objMXSML2ServerXMLHTPP.Open("GET", strWebdriverURL & "/session/" & strBrowserSessionId & "/element/" & strElementId & "/attribute/" & strAttributeName)
+    objMXSML2ServerXMLHTPP.send
+    strServerResponse = objMXSML2ServerXMLHTPP.responseText
+    '
+    'TODO: Get Only Value not entire response
+    GetAttributeValue = strServerResponse
+    Debug.Print strServerResponse
+End Function
+
+Function GetInnerText(ByVal strWebdriverURL As String, ByVal strBrowserSessionId As String, ByVal strElementId As String) As String
+    '
+    'Obtem o Texto contido dentro do Elemento strElementId
+    Dim strServerResponse As String
+    Dim objMXSML2ServerXMLHTPP As New MSXML2.ServerXMLHTTP
+    'Call objMXSML2ServerXMLHTPP.setRequestHeader("Content-Type", "application/json; charset=utf-8")
+    Call objMXSML2ServerXMLHTPP.Open("GET", strWebdriverURL & "/session/" & strBrowserSessionId & "/element/" & strElementId & "/text")
+    objMXSML2ServerXMLHTPP.send
+    strServerResponse = objMXSML2ServerXMLHTPP.responseText
+    '
+    'TODO: Get Only Value not entire response
+    GetInnerText = strServerResponse
+    Debug.Print strServerResponse
+End Function
