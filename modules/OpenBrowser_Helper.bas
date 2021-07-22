@@ -9,8 +9,9 @@ Option Explicit
 
 Function ExtractSessionIdFromServerResponse(ByVal strServerResponse As String) As String
 '
-Dim objRegex As New VBScript_RegExp_55.RegExp
-Dim objMatchCollection As VBScript_RegExp_55.MatchCollection
+Dim objRegex As Object          'VBScript_RegExp_55.RegExp
+Set objRegex = CreateObject("VBScript.Regexp")
+Dim objMatchCollection As Object      'VBScript_RegExp_55.MatchCollection
 With objRegex
     .Global = False
     '.Pattern = "(?=""sessionId"":"".*"")"
