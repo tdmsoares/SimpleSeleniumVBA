@@ -17,10 +17,10 @@ With objRegex
     .Pattern = """sessionId"":"".*"""
 End With
 Set objMatchCollection = objRegex.Execute(strServerResponse)
-ExtractSessionIdFromServerResponse = Strings.Replace(objMatchCollection(0), """sessionId"":""", """")
+ExtractSessionIdFromServerResponse = Strings.Replace(Strings.Replace(objMatchCollection(0), """sessionId"":""", """"), """", "")
 End Function
 
-Sub OpenChrome()
+Function OpenChrome() As String
     '
     '
     Dim strServerResponse As String
@@ -31,4 +31,5 @@ Sub OpenChrome()
     strServerResponse = objMXSML2ServerXMLHTPP.responseText
     Debug.Print "Server Response: " & strServerResponse
     Debug.Print "SessionId: " & ExtractSessionIdFromServerResponse(strServerResponse)
-End Sub
+    OpenChrome = ExtractSessionIdFromServerResponse(strServerResponse)
+End Function
