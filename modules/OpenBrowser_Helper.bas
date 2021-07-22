@@ -23,7 +23,7 @@ End Function
 
 Function OpenChrome() As String
     '
-    '
+    'Open Chrome Browser using an opened ChromeDriver
     Dim strServerResponse As String
     Dim objMXSML2ServerXMLHTPP As New MSXML2.ServerXMLHTTP
     Call objMXSML2ServerXMLHTPP.Open("POST", "http://localhost:9515/session")
@@ -33,4 +33,20 @@ Function OpenChrome() As String
     Debug.Print "Server Response: " & strServerResponse
     Debug.Print "SessionId: " & ExtractSessionIdFromServerResponse(strServerResponse)
     OpenChrome = ExtractSessionIdFromServerResponse(strServerResponse)
+End Function
+
+Function OpenFirefox() As String
+    '
+    '
+    Dim strServerResponse As String
+    Dim objMXSML2ServerXMLHTPP As New MSXML2.ServerXMLHTTP
+    Call objMXSML2ServerXMLHTPP.Open("POST", "http://127.0.0.1:4444/session")
+    Call objMXSML2ServerXMLHTPP.setRequestHeader("Content-Type", "application/json; charset=utf-8")
+    'Call objMXSML2ServerXMLHTPP.send("{""capabilities"":{""firstMatch"":[{""browserName"":""chrome"",""goog:chromeOptions"":{""args"":[""user-data-dir=D:\\Profiles\\tdmsoares\\Desktop\\tmpChromeUserData\\User Data""],""excludeSwitches"":[""enable-automation""],""extensions"":[],""prefs"":{""credentials_enable_service"":false,""profile.default_content_setting_values.notifications"":1,""profile.default_content_settings.popups"":0,""profile.password_manager_enabled"":false}}}]},""desiredCapabilities"":{""browserName"":""chrome"",""goog:chromeOptions"":{""args"":[],""excludeSwitches"":[""enable-automation""],""extensions"":[],""prefs"":{""credentials_enable_service"":false,""profile.default_content_setting_values.notifications"":1,""profile.default_content_settings.popups"":0,""profile.password_manager_enabled"":false}}}}")
+    'Call objMXSML2ServerXMLHTPP.send("{""capabilities"":{""alwaysMatch"":{""browserName"":""firefox""}}}")
+    Call objMXSML2ServerXMLHTPP.send("{""capabilities"":{}}")
+    strServerResponse = objMXSML2ServerXMLHTPP.responseText
+    Debug.Print "Server Response: " & strServerResponse
+    Debug.Print "SessionId: " & ExtractSessionIdFromServerResponse(strServerResponse)
+    OpenFirefox = ExtractSessionIdFromServerResponse(strServerResponse)
 End Function
