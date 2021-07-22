@@ -27,8 +27,9 @@ End Function
 Function ExtractElementIdFromServerResponse(ByVal strServerResponse As String) As String
 '
 'TODO
-Dim objRegex As New VBScript_RegExp_55.RegExp
-Dim objMatchCollection As VBScript_RegExp_55.MatchCollection
+Dim objRegex As Object
+Set objRegex = CreateObject("VBScript.Regexp")
+Dim objMatchCollection As Object         'VBScript_RegExp_55.MatchCollection
 With objRegex
     .Global = False
     '.Pattern = "(?=""sessionId"":"".*"")"
