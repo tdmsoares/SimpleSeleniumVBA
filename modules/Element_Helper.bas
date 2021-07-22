@@ -99,7 +99,7 @@ Function GetAttributeValue(ByVal strWebdriverURL As String, ByVal strBrowserSess
     strServerResponse = objMXSML2ServerXMLHTPP.responseText
     '
     'TODO: Get Only Value not entire response
-    GetAttributeValue = strServerResponse
+    GetAttributeValue = Strings.Replace(Strings.Replace(Strings.Replace(Strings.Replace(Strings.Replace(strServerResponse, "value", ""), ":", ""), "{", ""), "}", ""), """", "")
     Debug.Print strServerResponse
 End Function
 
@@ -114,6 +114,6 @@ Function GetInnerText(ByVal strWebdriverURL As String, ByVal strBrowserSessionId
     strServerResponse = objMXSML2ServerXMLHTPP.responseText
     '
     'TODO: Get Only Value not entire response
-    GetInnerText = strServerResponse
+    GetInnerText = Strings.Replace(Strings.Replace(Strings.Replace(Strings.Replace(Strings.Replace(strServerResponse, "value", ""), ":", ""), "{", ""), "}", ""), """", "")
     Debug.Print strServerResponse
 End Function
