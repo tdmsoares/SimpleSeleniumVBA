@@ -7,7 +7,7 @@ Option Explicit
 '------------------------------------------------------------------------------------------------------------------
 
 
-Sub FindElementByXpath(ByVal strWebdriverURL As String, ByVal strBrowserSessionId As String, ByVal strElementIdentifier As String)
+Function FindElementByXpath(ByVal strWebdriverURL As String, ByVal strBrowserSessionId As String, ByVal strElementIdentifier As String) As String
     '
     'Encontra um elemento pelo seu XPath
     Dim strServerResponse As String
@@ -20,9 +20,9 @@ Sub FindElementByXpath(ByVal strWebdriverURL As String, ByVal strBrowserSessionI
     '
     'Call GetCurrentURL(strWebdriverURL, strBrowserSessionId)
     strServerResponse = objMXSML2ServerXMLHTPP.responseText
-    Debug.Print ExtractElementIdFromServerResponse(strServerResponse)
+    FindElementByXpath = ExtractElementIdFromServerResponse(strServerResponse)
     
-End Sub
+End Function
 
 Function ExtractElementIdFromServerResponse(ByVal strServerResponse As String) As String
 '
