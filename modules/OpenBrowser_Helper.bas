@@ -50,3 +50,17 @@ Function OpenFirefox() As String
     Debug.Print "SessionId: " & ExtractSessionIdFromServerResponse(strServerResponse)
     OpenFirefox = ExtractSessionIdFromServerResponse(strServerResponse)
 End Function
+
+Sub CloseBrowser(ByVal strWebdriverURL As String, ByVal strBrowserSessionId As String)
+    '
+    'Fecha o Browser identificado pelo strBrowserSessionId
+    Dim strServerResponse As String
+    Dim objMXSML2ServerXMLHTPP As New MSXML2.ServerXMLHTTP
+    'Call objMXSML2ServerXMLHTPP.setRequestHeader("Content-Type", "application/json; charset=utf-8")
+    Call objMXSML2ServerXMLHTPP.Open("DELETE", strWebdriverURL & "/session/" & strBrowserSessionId)
+    objMXSML2ServerXMLHTPP.send
+    strServerResponse = objMXSML2ServerXMLHTPP.responseText
+    '
+    'TODO: Get Only URL not entire response
+    Debug.Print strServerResponse
+End Sub
