@@ -25,6 +25,34 @@ Function FindElementByXpath(ByVal strWebdriverURL As String, ByVal strBrowserSes
     
 End Function
 
+Function FindElementsByCssSelector(ByVal strWebdriverURL As String, ByVal strBrowserSessionId As String, ByVal strElementIdentifier As String) As Variant
+    '
+    'Retorna uma array com os elementos correspondentes ao CSS Selector
+    Dim strServerResponse As String
+    Dim locatorStrategy As String
+    locatorStrategy = "css selector"
+    Dim objMXSML2ServerXMLHTPP As New MSXML2.ServerXMLHTTP
+    Call objMXSML2ServerXMLHTPP.Open("POST", strWebdriverURL & "/session/" & strBrowserSessionId & "/elements")
+    Call objMXSML2ServerXMLHTPP.setRequestHeader("Content-Type", "application/json; charset=utf-8")
+    objMXSML2ServerXMLHTPP.send ("{""using"":""" & locatorStrategy & """, ""value"": """ & strElementIdentifier & """}")
+    '
+    'Call GetCurrentURL(strWebdriverURL, strBrowserSessionId)
+    strServerResponse = objMXSML2ServerXMLHTPP.responseText
+    Debug.Print strServerResponse
+    strServerResponse = Strings.Replace(Strings.Replace(Strings.Replace(Strings.Replace(strServerResponse, "{""value"":[", ""), "{", ""), "}", ""), "]", "")
+    Debug.Print strServerResponse
+    '
+    Dim arrayElements As Variant
+    arrayElements = Strings.Split(strServerResponse, ",")
+    '
+    Dim indexArray As Integer
+    For indexArray = LBound(arrayElements) To UBound(arrayElements)
+        arrayElements(indexArray) = ExtractElementIdFromServerResponse(arrayElements(indexArray))
+    Next
+    FindElementsByCssSelector = arrayElements
+    '
+End Function
+
 Function ExtractElementIdFromServerResponse(ByVal strServerResponse As String) As String
 '
 'TODO

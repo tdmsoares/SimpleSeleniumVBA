@@ -3,7 +3,7 @@ Beginning Export of all Source
 SimpleSeleniumVBA.accda
 VCS Version 3.3.17
 Using Fast Save
-23/07/2021 11:11:51
+26/07/2021 15:24:30
 -------------------------------------
 -------------------------------------
 Exporting themes...           
@@ -43,7 +43,7 @@ No modified forms found in this database.
 No modified macros found in this database.
 -------------------------------------
 Exporting modules...          
-  OpenBrowser_Helper
+  Element_Helper
 [1] modules processed.
 -------------------------------------
 No modified reports found in this database.
@@ -66,7 +66,7 @@ Exporting nav pane groups...
 -------------------------------------
 No modified hidden attributes found in this database.
 -------------------------------------
-Done. (0,4 seconds)
+Done. (0,91 seconds)
 
 --------------------------------------------------
                 PERFORMANCE REPORTS
@@ -74,37 +74,37 @@ Done. (0,4 seconds)
 Object Type                   Count     Seconds
 --------------------------------------------------
 Themes                        1         0,03
-VB Project                    1         0,01
-VBE References                3         0,01
-Proj Properties               1         0,00
-DB Properties                 31        0,06
-Modules                       1         0,08
+VB Project                    1         0,02
+VBE References                3         0,02
+Proj Properties               1         0,01
+DB Properties                 31        0,58
+Modules                       1         0,06
 Table Data                    1         0,01
-Doc Properties                2         0,00
-Nav Pane Groups               1         0,00
+Doc Properties                2         0,01
+Nav Pane Groups               1         0,01
 --------------------------------------------------
-TOTALS:                       42        0,21
+TOTALS:                       42        0,73
 --------------------------------------------------
 
 --------------------------------------------------
 Operations                    Count     Seconds
 --------------------------------------------------
-Read File                     8         0,01
+Read File                     8         0,03
 Compute SHA256                12        0,00
-Console Updates               2         0,03
+Console Updates               2         0,04
 Verify Path                   4         0,00
 Create Folder                 1         0,00
 Export Theme                  1         0,02
-Compare Dictionary            5         0,03
+Compare Dictionary            5         0,04
 Get Modified Date             3         0,00
-Clear Orphaned                3         0,03
+Clear Orphaned                3         0,04
 Get VBA Hash                  9         0,01
-App.SaveAsText()              1         0,03
-Extended Chars Check          1         0,03
-Delete File                   2         0,01
+App.SaveAsText()              1         0,02
+Extended Chars Check          1         0,00
+Delete File                   2         0,00
 Write File                    2         0,00
 --------------------------------------------------
-Other Operations                        0,20
+Other Operations                        0,70
 --------------------------------------------------
 
 
