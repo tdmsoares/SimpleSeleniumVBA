@@ -157,3 +157,12 @@ Function GetInnerText(ByVal strWebdriverURL As String, ByVal strBrowserSessionId
     GetInnerText = Strings.Replace(Strings.Replace(Strings.Replace(Strings.Replace(strServerResponse, """value"":", ""), "{", ""), "}", ""), """", "")
     Debug.Print strServerResponse
 End Function
+
+'====================================================================
+'Helper Functions: Use Script to perform actions related to elements
+'====================================================================
+Sub SetAttributeValue(ByVal strWebdriverURL As String, ByVal strBrowserSessionId As String, ByVal strElementIdentifierAsCssSelector As String, ByVal strAttrName As String, ByVal strAttrValue As String)
+    '   OBS: Usar single quotes apostrofo ' no lugar de aspas " para não ter problemas na execução do JS Script
+    Call Document_Scripting_Helper.ExecuteSyncScript(strWebdriverURL, strBrowserSessionId, _
+                "(document.querySelector('" & strElementIdentifierAsCssSelector & "')).setAttribute('" & strAttrName & "','" & strAttrValue & "')")
+End Sub
