@@ -29,5 +29,6 @@ Function GetCurrentURL(ByVal strWebdriverURL As String, ByVal strBrowserSessionI
     strServerResponse = objMXSML2ServerXMLHTPP.responseText
     '
     'TODO: Get Only URL not entire response
-    Debug.Print strServerResponse
+    strServerResponse = Strings.Replace(Strings.Replace(Strings.Replace(Strings.Replace(strServerResponse, """value"":", ""), "{", ""), "}", ""), """", "")
+    GetCurrentURL = strServerResponse
 End Function
