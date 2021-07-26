@@ -1,11 +1,10 @@
-Option Compare Database
+﻿Option Compare Database
 Option Explicit
 
 
 '------------------------------------------------------------------------------------------------------------------
 ' Coded by tdmsoares
 '------------------------------------------------------------------------------------------------------------------
-
 
 Function FindElementByXpath(ByVal strWebdriverURL As String, ByVal strBrowserSessionId As String, ByVal strElementIdentifier As String) As String
     '
@@ -51,6 +50,19 @@ Function FindElementsByCssSelector(ByVal strWebdriverURL As String, ByVal strBro
     Next
     FindElementsByCssSelector = arrayElements
     '
+End Function
+
+Function FindElementById(ByVal strWebdriverURL As String, ByVal strBrowserSessionId As String, ByVal strElementIdentifier As String) As String
+'
+    'Seleciona o elemento correspondente ao Id do strElementIdentifier
+    'OBS: Como o método usado FindElementsByCssSelector retorna uma array e o CSS Selector é um ID, teremos um elemento único
+    '       Neste caso nosso elemento é o LBound desta array
+    Dim strElementId As String
+    Dim arrayElements As Variant
+    arrayElements = Element_Helper.FindElementsByCssSelector(strWebdriverURL, strBrowserSessionId, "#" & strElementIdentifier)
+    strElementId = arrayElements(LBound(arrayElements))
+    Debug.Print strElementId
+    FindElementById = strElementId
 End Function
 
 Function ExtractElementIdFromServerResponse(ByVal strServerResponse As String) As String

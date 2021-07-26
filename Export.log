@@ -3,7 +3,7 @@ Beginning Export of all Source
 SimpleSeleniumVBA.accda
 VCS Version 3.3.17
 Using Fast Save
-26/07/2021 15:28:17
+26/07/2021 16:01:19
 -------------------------------------
 -------------------------------------
 Exporting themes...           
@@ -43,7 +43,7 @@ No modified forms found in this database.
 No modified macros found in this database.
 -------------------------------------
 Exporting modules...          
-  BrowserNavigation_Helper
+  Element_Helper
 [1] modules processed.
 -------------------------------------
 No modified reports found in this database.
@@ -66,19 +66,19 @@ Exporting nav pane groups...
 -------------------------------------
 No modified hidden attributes found in this database.
 -------------------------------------
-Done. (0,19 seconds)
+Done. (0,18 seconds)
 
 --------------------------------------------------
                 PERFORMANCE REPORTS
 --------------------------------------------------
 Object Type                   Count     Seconds
 --------------------------------------------------
-Themes                        1         0,03
+Themes                        1         0,00
 VB Project                    1         0,00
 VBE References                3         0,00
 Proj Properties               1         0,00
 DB Properties                 31        0,02
-Modules                       1         0,04
+Modules                       1         0,07
 Table Data                    1         0,01
 Doc Properties                2         0,00
 Nav Pane Groups               1         0,00
@@ -94,18 +94,18 @@ Compute SHA256                12        0,00
 Console Updates               2         0,03
 Verify Path                   4         0,00
 Create Folder                 1         0,00
-Export Theme                  1         0,02
+Export Theme                  1         0,00
 Compare Dictionary            5         0,01
 Get Modified Date             3         0,00
 Clear Orphaned                3         0,01
-Get VBA Hash                  9         0,00
-App.SaveAsText()              1         0,00
+Get VBA Hash                  9         0,01
+App.SaveAsText()              1         0,02
 Extended Chars Check          1         0,00
-Enc. windows-1252 as utf-8    1         0,02
+Enc. windows-1252 as utf-8    1         0,00
 Delete File                   2         0,00
 Write File                    2         0,00
 --------------------------------------------------
-Other Operations                        0,09
+Other Operations                        0,11
 --------------------------------------------------
 
 
